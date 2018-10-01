@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="grid">
+
+    
+        <div id="head">
+            <h1>Grants Flipping Pizzzzza Shop</h1>
+        </div>
+
+        <div id="sidebar">
+                <a href="">Order</a>
+                <a href="">Ingredients</a>
+                <a href="">Location</a>
+                <a href="">Hours</a> <br/> <br/> <br/>
+                <a href="" class="calculate" onclick="getReceipt()">Order</a>
+        </div>
+
+            <div id="main">
+                <h2>Select Pizza Size:</h2>
+                <label class="container">Personal
+                    <input type="radio" class="size" name="size" value="Personal Pie">
+                    <span class="selected"></span>
+                </label>
+                <label class="container">Medium
+                        <input type="radio" class="size" name="size" value="Medium Pie">
+                        <span class="selected"></span>
+                    </label>
+                    <label class="container">Large
+                            <input type="radio" class="size" name="size" value="Large Pie">
+                            <span class="selected"></span>
+                        </label>
+                        <label class="container">Extra-Large
+                                <input type="radio" class="size" name="size" value="Extra Large Pie">
+                                <span class="selected"></span>
+                            </label>
+            </div> 
+            
+            <div id="five">
+                <h2>Select Meats:</h2>
+                <label class="container">Pepperoni
+                    <input type="checkbox" class = "meats" value="Pepperoni">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Sausage
+                        <input type="checkbox" class = "meats" value = "Sausage">
+                        <span class="checkmark"></span>
+                </label>
+                <label class="container">Canadian Bacon
+                        <input type="checkbox" class = "meats" value ="Canadian Bacon">
+                        <span class="checkmark"></span>
+                </label>
+                <label class="container">Ground Beef
+                        <input type="checkbox" class = "meats" value ="Ground Beef">
+                        <span class="checkmark"></span>
+                </label>
+                <label class="container">Anchovy
+                        <input type="checkbox" class = "meats" value="Anchovy">
+                        <span class="checkmark"></span>
+                </label>
+                <label class="container">Chicken
+                        <input type="checkbox" class = "meats" value="Chicken">
+                        <span class="checkmark"></span>
+                </label>
+            
+            </div>
+
+            <div id="four">
+                    <h2>Select Cheese Dosing:</h2>
+                    <label class="container">Regular
+                        <input type="radio" name="cheese" class = "cheese" value="Regular">
+                        <span class="selected"></span>
+                    </label>
+                    <label class="container">No Cheese
+                        <input type="radio" name="cheese" class = "cheese" value="No Cheese">
+                        <span class="selected"></span>
+                    </label>
+                    <label class="container">Extra Cheese
+                        <input type="radio" name="cheese" class = "cheese" value="Extra Cheese">
+                        <span class="selected"></span>
+                    </label>
+                </div>
+
+                <div id="two">
+                        <h2>Select Crust:</h2>
+                        <label class="container">Plain Crust
+                            <input type="radio" name="crust" class="crust" value="Plain Crust">
+                            <span class="selected"></span>
+                        </label>
+                        <label class="container">Garlic Butter Crust
+                            <input type="radio" name="crust" class="crust" value="Garlic Butter Crust">
+                            <span class="selected"></span>
+                        </label>
+                        <label class="container">Cheese Stuffed Crust
+                            <input type="radio" name="crust" class="crust" value="Cheese Stuffed Crust">
+                            <span class="selected"></span>
+                        </label>
+                        <label class="container">Spicy Crust
+                            <input type="radio" name="crust" class="crust" value="Spicy Crust">
+                            <span class="selected"></span>
+                        </label>
+                        <label class="container">House Special Crust
+                            <input type="radio" name="crust" class="crust" value="House Special Crust">
+                            <span class="selected"></span>
+                        </label>
+                    </div>
+
+                    <div id="three">
+                            <h2>Select Sauce:</h2>
+                            <label class="container">Marinara Sauce
+                                <input type="radio" name="sauce" class="sauce" value="Marinara Sauce">
+                                <span class="selected"></span>
+                            </label>
+                            <label class="container">White Sauce
+                                <input type="radio" name="sauce" class="sauce" value="White Sauce">
+                                <span class="selected"></span>
+                            </label>
+                            <label class="container">Barbeque Sauce
+                                <input type="radio" name="sauce" class="sauce" value="Barbeque Sauce">
+                                <span class="selected"></span>
+                            </label>
+                            <label class="container">No Sauce
+                                <input type="radio" name="sauce" class="sauce" value="No Sauce">
+                                <span class="selected"></span>
+                            </label>
+                    </div>
+
+                    <div id="six">
+                            <h2>Select Veggies:</h2>
+                            <label class="container">Tomatoes
+                                <input type="checkbox" class="veggie" value="Tomatoes">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Onions
+                                    <input type="checkbox" class="veggie" value="Onions">
+                                    <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Olives
+                                    <input type="checkbox" class="veggie" value="Olives">
+                                    <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Green Peppers
+                                    <input type="checkbox" class="veggie" value="Green Peppers">
+                                    <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Mushrooms
+                                    <input type="checkbox" class="veggie" value="Mushrooms">
+                                    <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Pineapple
+                                    <input type="checkbox" class="veggie" value="Pineapple">
+                                    <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Spinach
+                                    <input type="checkbox" class="veggie" value="Spinach">
+                                    <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Jalapeno
+                                    <input type="checkbox" class="veggie" value="Jalapeno">
+                                    <span class="checkmark"></span>
+                            </label>
+                    </div>
+            <div id="coupons">
+                <div id="showText"></div>
+                <div id="totalPrice"></div>
+            </div>
+
+            <div id="footer">
+                <p>&copy 2018 | Grants Flipping Pizza Shop </p>
+            </div>
+
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

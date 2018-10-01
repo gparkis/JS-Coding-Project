@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+}
+
+#grid {
+    display: grid;
+    grid-template-areas:
+        "header header header header header"
+        "sidebar one two three coupons"
+        "sidebar four five six coupons"
+        "footer footer footer footer footer";
+    grid-template-columns: 1fr 4fr 4fr 4fr 2fr;
+    grid-template-rows: 125px auto auto 100px;
+}
+.calculate {
+    background-color: orange;
+}
+
+#head {
+    grid-area: header;
+    background-color: darkblue;
+    color: yellow;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    margin: 10px;
+    background-color: black;
+}
+
+a {
+    display: block;
+    padding: 20px;
+    margin: 5px;
+    background-color: black;
+    color: white;
+    border: 1px solid gray;
+}
+
+a:hover {
+    background-color: green;
+    transform: scale(1.1);
+}
+
+#main {
+    grid-area: one;
+    padding-left: 30px;
+}
+#two {
+    grid-area: two;
+    padding-bottom: 30px;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    grid-area: four;
+    padding-left: 30px;
+    padding-bottom:30px;
+}
+#five {
+    grid-area: five;
+}
+#six {
+    grid-area: six;
+    padding-bottom: 10px;
+}
+
+#footer {
+    grid-area: footer;
+    background-color: darkblue;
+    color: yellow;
+    padding: 0 0 0 0px;
+    padding-left: 20px;
+}
+
+#coupons {
+    grid-area: coupons;
+    display: block;
+    width:300px;
+    height: 100px;
+    margin-right: 20px;
+    padding-top: 40px;
+}
+
+#coupons, #showText, #totalPrice {
+    display: block;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 30px;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+}
+
+.selected {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.container:hover input ~ .selected{
+    background-color: #ccc;
+}
+
+.container input:checked ~ .selected {
+    background-color: #2196f3;
+}
+
+.selected:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .selected:after {
+    display: block;
+}
+ 
+.container .selected:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }  
+  
+  #showText {
+      display: block;
+      background-color: yellow;
+      font-size: 28px;
+  }
+
+  #totalPrice {
+    display: block;
+
+    background-color: white;
+   
+    border-radius: 3px;
+    font-size: 48px;
+  }
